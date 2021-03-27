@@ -43,13 +43,6 @@ class _MyHomePageState extends State<MyCarouselPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Vertical list',
-          style: TextStyle(color: Colors.white),
-        ),
-        centerTitle: true,
-      ),
       body: Container(
         child: Row(
           children: [
