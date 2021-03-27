@@ -58,8 +58,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        child: Text('Hi'),
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(
+            'Hrizontal list',
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
+        ),
       ),
     );
   }
