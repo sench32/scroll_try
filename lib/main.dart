@@ -37,17 +37,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: CircularProgressIndicator(),
       );
     return Container(
-      width: 150,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      width: 10,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
             color: Colors.yellow,
-            width: 50,
-            height: 50,
+            width: 200,
+            height: 60,
             child: Center(
               child: Text(
-                '${data[index]}',
+                '${data[index]}\$',
                 style: TextStyle(fontSize: 15.0),
               ),
             ),
@@ -73,10 +73,10 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Expanded(
                   child: ScrollSnapList(
-                duration: 150,
                 scrollDirection: Axis.vertical,
                 itemBuilder: _buildItemList,
                 itemSize: 50,
+                focusOnItemTap: true,
                 dynamicItemSize: true,
                 onReachEnd: () {
                   print('Done!');
