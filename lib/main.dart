@@ -43,12 +43,12 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           Container(
             color: Colors.yellow,
-            width: 150,
-            height: 200,
+            width: 50,
+            height: 50,
             child: Center(
               child: Text(
                 '${data[index]}',
-                style: TextStyle(fontSize: 50.0),
+                style: TextStyle(fontSize: 15.0),
               ),
             ),
           )
@@ -63,18 +63,20 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'Hrizontal list',
+            'Vertical list',
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
         ),
         body: Container(
-          child: Column(
+          child: Row(
             children: [
               Expanded(
                   child: ScrollSnapList(
+                duration: 150,
+                scrollDirection: Axis.vertical,
                 itemBuilder: _buildItemList,
-                itemSize: 150,
+                itemSize: 50,
                 dynamicItemSize: true,
                 onReachEnd: () {
                   print('Done!');
