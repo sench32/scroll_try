@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_snap_list/scroll_snap_list.dart';
 
 void main() {
   runApp(MyApp());
@@ -30,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<int> data = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
-  Widget buildItemList(BuildContext context, int index) {
+  Widget _buildItemList(BuildContext context, int index) {
     if (index == data.length)
       return Center(
         child: CircularProgressIndicator(),
@@ -65,6 +66,23 @@ class _MyHomePageState extends State<MyHomePage> {
             style: TextStyle(color: Colors.white),
           ),
           centerTitle: true,
+        ),
+        body: Container(
+          child: Column(
+            children: [
+              Expanded(
+                  child: ScrollSnapList(
+                itemBuilder: _buildItemList,
+                itemSize: 150,
+                dynamicItemSize: true,
+                onReachEnd: () {
+                  print('Done!');
+                },
+                itemCount: data.length,
+                onItemFocus: (int) {},
+              ))
+            ],
+          ),
         ),
       ),
     );
