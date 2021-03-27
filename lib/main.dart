@@ -30,6 +30,31 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List<int> data = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 
+  Widget buildItemList(BuildContext context, int index) {
+    if (index == data.length)
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+    return Container(
+      width: 150,
+      child: Column(
+        children: [
+          Container(
+            color: Colors.yellow,
+            width: 150,
+            height: 200,
+            child: Center(
+              child: Text(
+                '${data[index]}',
+                style: TextStyle(fontSize: 50.0),
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
