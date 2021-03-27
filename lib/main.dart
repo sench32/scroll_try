@@ -28,6 +28,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<int> data = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
