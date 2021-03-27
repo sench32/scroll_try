@@ -24,14 +24,16 @@ class _MyHomePageState extends State<MyCarouselPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
-            color: Colors.yellow,
-            width: 200,
-            height: 60,
-            child: Center(
-              child: Text(
-                '${data[index]}\$',
-                style: TextStyle(fontSize: 15.0),
+          Expanded(
+            child: Container(
+              color: Colors.yellow,
+              width: 200,
+              height: 60,
+              child: Center(
+                child: Text(
+                  '${data[index]}\$',
+                  style: TextStyle(fontSize: 15.0, color: Colors.black),
+                ),
               ),
             ),
           )
@@ -48,6 +50,7 @@ class _MyHomePageState extends State<MyCarouselPage> {
           children: [
             Expanded(
                 child: ScrollSnapList(
+              curve: Curves.easeInOutQuad,
               scrollDirection: Axis.vertical,
               itemBuilder: _buildItemList,
               itemSize: 50,
