@@ -5,7 +5,12 @@ class MyLWSV extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListWheelScrollView(
+        physics: FixedExtentScrollPhysics(),
+        diameterRatio: 1.5,
+        squeeze: 1.1,
+        perspective: 0.01,
         itemExtent: 100,
+        overAndUnderCenterOpacity: 0.5,
         children: [
           Container(
             decoration: BoxDecoration(
