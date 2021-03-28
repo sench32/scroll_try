@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_try/list_wheel_scroll_view.dart';
 
 import 'carousel.dart';
 
@@ -36,11 +37,13 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     Container(
                       width: 195,
-                      child: MyCarouselPage(),
+                      child: MyLWSV(),
+                      // MyCarouselPage(),
                     ),
                     Container(
                       width: 195,
-                      child: MyCarouselPage(),
+                      child: MyLWSV(),
+                      // MyCarouselPage(),
                     ),
                   ],
                 ),
