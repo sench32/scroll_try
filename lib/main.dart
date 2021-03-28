@@ -33,15 +33,17 @@ class MyHomePage extends StatelessWidget {
               height: 200,
               child: Expanded(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Container(
-                      width: 195,
+                      padding: EdgeInsets.only(right: 2.5),
+                      width: 165,
                       child: MyLWSV(),
                       // MyCarouselPage(),
                     ),
                     Container(
-                      width: 195,
+                      padding: EdgeInsets.only(left: 2.5),
+                      width: 165,
                       child: MyLWSV(),
                       // MyCarouselPage(),
                     ),
