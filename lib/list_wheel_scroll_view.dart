@@ -5,7 +5,7 @@ class MyLWSV extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListWheelScrollView(
-        itemExtent: 150,
+        itemExtent: 100,
         children: [
           Container(
             decoration: BoxDecoration(
@@ -20,7 +20,63 @@ class MyLWSV extends StatelessWidget {
                 style: TextStyle(fontSize: 45, color: Colors.black),
               ),
             ),
-          )
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                '100',
+                style: TextStyle(fontSize: 45, color: Colors.black),
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                '100',
+                style: TextStyle(fontSize: 45, color: Colors.black),
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                '100',
+                style: TextStyle(fontSize: 45, color: Colors.black),
+              ),
+            ),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.teal,
+              borderRadius: BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+            child: Center(
+              child: Text(
+                '100',
+                style: TextStyle(fontSize: 45, color: Colors.black),
+              ),
+            ),
+          ),
         ],
       ),
     );
