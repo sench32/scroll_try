@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:scroll_try/list_wheel_scroll_view.dart';
+
+import 'carousel.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,29 +13,46 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(title: 'Scroll_Try'),
+      theme: ThemeData.dark(),
+      home: MyHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key key}) : super(key: key);
 
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Container(
-        child: Text('Hi'),
+      child: Scaffold(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              height: 200,
+              child: Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(right: 2.5),
+                      width: 165,
+                      child: MyLWSV(),
+                      // MyCarouselPage(),
+                    ),
+                    Container(
+                      padding: EdgeInsets.only(left: 2.5),
+                      width: 165,
+                      child: MyLWSV(),
+                      // MyCarouselPage(),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
